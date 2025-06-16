@@ -1,14 +1,13 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactButtons from "@/components/ContactButtons";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Chip, Microscope, Zap, Shield, Wrench, AlertTriangle } from "lucide-react";
+import { Cpu, Microscope, Zap, Shield, Wrench, AlertTriangle } from "lucide-react";
 
 const ChipLevelDiagnostic = () => {
   const services = [
     {
-      icon: <Chip className="w-10 h-10 text-blue-600" />,
+      icon: <Cpu className="w-10 h-10 text-blue-600" />,
       title: "Motherboard Repair",
       description: "Advanced motherboard repair services including component replacement, trace repair, and circuit analysis for complex hardware failures.",
       features: ["SMD component replacement", "Trace repair and jumping", "Power circuit analysis", "BIOS chip programming", "Voltage regulation repair"]
@@ -84,7 +83,7 @@ const ChipLevelDiagnostic = () => {
       {/* Hero Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="container mx-auto text-center">
-          <Chip className="w-16 h-16 mx-auto mb-6" />
+          <Cpu className="w-16 h-16 mx-auto mb-6" />
           <h1 className="text-5xl font-bold mb-4">Advanced Chip Level Diagnostic Services</h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Professional chip-level diagnostics and micro-soldering services for complex hardware failures. 

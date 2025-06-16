@@ -1,11 +1,10 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactButtons from "@/components/ContactButtons";
-import { Laptop, Database, PcCase, Chip, Bell, Home, Wrench, Clock } from "lucide-react";
+import { Laptop, Database, PcCase, Cpu, Bell, Home, Wrench, Clock } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -31,7 +30,7 @@ const Index = () => {
       ribbon: "Expert Build"
     },
     {
-      icon: <Chip className="w-12 h-12 text-orange-600" />,
+      icon: <Cpu className="w-12 h-12 text-orange-600" />,
       title: "Chip Level Diagnostic",
       description: "Advanced chip-level diagnostics and micro-soldering services for complex hardware issues and motherboard repairs.",
       link: "/chip-level-diagnostic",
