@@ -8,14 +8,27 @@ import { Monitor, Shield, Wrench, Download, Zap, HardDrive } from "lucide-react"
 const Software = () => {
   const services = [
     {
-      icon: <Monitor className="w-10 h-10 text-blue-600" />,
-      title: "Operating System Solutions",
+      icon: (
+        <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+          <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.351"/>
+          </svg>
+        </div>
+      ),
+      title: "Windows OS Installation & Setup",
+      description: "Professional Windows installation, activation, and optimization services for all Windows versions with driver setup and system configuration.",
+      features: ["Windows 10/11 installation", "System activation", "Driver installation", "Windows updates", "User account setup", "System optimization"],
+      price: "Starting from ₹800"
+    },
+    {
+      icon: <Monitor className="w-10 h-10 text-green-600" />,
+      title: "Multi-OS Solutions",
       description: "Complete OS installation, upgrades, and optimization services for Windows, macOS, and Linux systems with data preservation.",
-      features: ["Windows 10/11 installation", "macOS installation", "Linux distributions", "OS upgrades", "Driver installation", "System optimization"],
+      features: ["macOS installation", "Linux distributions", "OS upgrades", "Dual boot setup", "Virtual machines", "System migration"],
       price: "Starting from ₹500"
     },
     {
-      icon: <Shield className="w-10 h-10 text-green-600" />,
+      icon: <Shield className="w-10 h-10 text-red-600" />,
       title: "Virus Removal & Security",
       description: "Comprehensive malware removal, antivirus installation, and security hardening to protect your system from threats.",
       features: ["Virus/malware removal", "Antivirus installation", "Firewall configuration", "System security audit", "Data recovery", "Preventive measures"],
@@ -36,14 +49,14 @@ const Software = () => {
       price: "Starting from ₹200"
     },
     {
-      icon: <HardDrive className="w-10 h-10 text-red-600" />,
+      icon: <HardDrive className="w-10 h-10 text-indigo-600" />,
       title: "Data Migration & Backup",
       description: "Safe data transfer between systems, backup solutions setup, and cloud storage configuration for data security.",
       features: ["Data migration", "Backup solutions", "Cloud storage setup", "File organization", "Sync configuration", "Recovery planning"],
       price: "Starting from ₹600"
     },
     {
-      icon: <Zap className="w-10 h-10 text-indigo-600" />,
+      icon: <Zap className="w-10 h-10 text-teal-600" />,
       title: "System Recovery",
       description: "Boot repair, system restore, and recovery services for corrupted or damaged operating systems and applications.",
       features: ["Boot repair", "System restore", "Crash recovery", "File system repair", "Partition recovery", "Emergency boot disk"],
@@ -120,11 +133,17 @@ const Software = () => {
       {/* Hero Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="container mx-auto text-center">
-          <Monitor className="w-16 h-16 mx-auto mb-6" />
-          <h1 className="text-5xl font-bold mb-4">Professional Software Solutions</h1>
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+              <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.351"/>
+              </svg>
+            </div>
+          </div>
+          <h1 className="text-5xl font-bold mb-4">Professional Software & OS Solutions</h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Comprehensive software services including OS installation, virus removal, system optimization, 
-            and application setup. Professional solutions for all your software needs.
+            Complete software services including Windows OS installation, virus removal, system optimization, 
+            and application setup. Professional solutions for all your software and operating system needs.
           </p>
           <ContactButtons />
         </div>

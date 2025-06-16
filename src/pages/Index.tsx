@@ -1,10 +1,11 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactButtons from "@/components/ContactButtons";
-import { Laptop, Database, PcCase, Cpu, Bell, Home, Wrench, Clock } from "lucide-react";
+import { Laptop, Database, PcCase, Cpu, Bell, Home, Wrench, Clock, Monitor } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -37,6 +38,13 @@ const Index = () => {
       ribbon: "Advanced Tech"
     },
     {
+      icon: <Monitor className="w-12 h-12 text-indigo-600" />,
+      title: "OS Installation & Software",
+      description: "Professional operating system installation, software setup, and system optimization services for all platforms.",
+      link: "/software",
+      ribbon: "Complete Setup"
+    },
+    {
       icon: <Bell className="w-12 h-12 text-red-600" />,
       title: "Priority Support",
       description: "Fast-track repair services with priority handling, express diagnostics, and expedited turnaround times.",
@@ -44,11 +52,38 @@ const Index = () => {
       ribbon: "Fast Service"
     },
     {
-      icon: <Home className="w-12 h-12 text-indigo-600" />,
+      icon: <Home className="w-12 h-12 text-teal-600" />,
       title: "Home Service",
       description: "Convenient doorstep service for laptop repairs, PC setup, and technical support at your location.",
       link: "/home-service",
       ribbon: "Doorstep Service"
+    }
+  ];
+
+  const brandLogos = [
+    {
+      name: "HP",
+      logo: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=50&q=80"
+    },
+    {
+      name: "Lenovo",
+      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=100&h=50&q=80"
+    },
+    {
+      name: "Dell",
+      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=100&h=50&q=80"
+    },
+    {
+      name: "ASUS",
+      logo: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=50&q=80"
+    },
+    {
+      name: "Acer",
+      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=100&h=50&q=80"
+    },
+    {
+      name: "MSI",
+      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=100&h=50&q=80"
     }
   ];
 
@@ -65,13 +100,38 @@ const Index = () => {
               CORETECH
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-4">
-              Professional Hardware Solutions
+              Professional Hardware & Software Solutions
             </p>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Expert laptop repair, data recovery, PC build, and chip-level diagnostic services. 
+              Expert laptop repair, data recovery, PC build, chip-level diagnostic, and software installation services. 
               Your trusted partner for all computing solutions with professional service and guaranteed results.
             </p>
             <ContactButtons />
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Partners Section */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Authorized Service Partner</h2>
+            <p className="text-gray-600">We service all major brands with genuine parts and expertise</p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {brandLogos.map((brand, index) => (
+              <div key={index} className="flex flex-col items-center group">
+                <div className="w-20 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-2 group-hover:shadow-md transition-shadow duration-300">
+                  <img 
+                    src={brand.logo} 
+                    alt={brand.name}
+                    className="w-16 h-10 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <span className="text-sm font-semibold text-gray-600">{brand.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -82,7 +142,7 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Professional Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive hardware solutions with expert technicians, quality parts, and reliable service
+              Comprehensive hardware and software solutions with expert technicians, quality parts, and reliable service
             </p>
           </div>
           
@@ -158,7 +218,7 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Get Your Device Fixed?</h2>
           <p className="text-xl mb-8 text-gray-300">
-            Contact us now for professional hardware solutions and expert service
+            Contact us now for professional hardware and software solutions with expert service
           </p>
           <ContactButtons />
         </div>
