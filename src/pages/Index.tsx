@@ -60,33 +60,6 @@ const Index = () => {
     }
   ];
 
-  const brandLogos = [
-    {
-      name: "HP",
-      logo: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=50&q=80"
-    },
-    {
-      name: "Lenovo",
-      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=100&h=50&q=80"
-    },
-    {
-      name: "Dell",
-      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=100&h=50&q=80"
-    },
-    {
-      name: "ASUS",
-      logo: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=50&q=80"
-    },
-    {
-      name: "Acer",
-      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=100&h=50&q=80"
-    },
-    {
-      name: "MSI",
-      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=100&h=50&q=80"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Header />
@@ -107,31 +80,6 @@ const Index = () => {
               Your trusted partner for all computing solutions with professional service and guaranteed results.
             </p>
             <ContactButtons />
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Partners Section */}
-      <section className="py-12 px-4 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Authorized Service Partner</h2>
-            <p className="text-gray-600">We service all major brands with genuine parts and expertise</p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {brandLogos.map((brand, index) => (
-              <div key={index} className="flex flex-col items-center group">
-                <div className="w-20 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-2 group-hover:shadow-md transition-shadow duration-300">
-                  <img 
-                    src={brand.logo} 
-                    alt={brand.name}
-                    className="w-16 h-10 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <span className="text-sm font-semibold text-gray-600">{brand.name}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>

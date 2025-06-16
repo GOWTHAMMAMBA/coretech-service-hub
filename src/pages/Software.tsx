@@ -23,8 +23,8 @@ const Software = () => {
     {
       icon: <Monitor className="w-10 h-10 text-green-600" />,
       title: "Multi-OS Solutions",
-      description: "Complete OS installation, upgrades, and optimization services for Windows, macOS, and Linux systems with data preservation.",
-      features: ["macOS installation", "Linux distributions", "OS upgrades", "Dual boot setup", "Virtual machines", "System migration"],
+      description: "Complete OS installation, upgrades, and optimization services for Windows and Linux systems with data preservation.",
+      features: ["Windows installation", "Linux distributions", "OS upgrades", "Dual boot setup", "Virtual machines", "System migration"],
       price: "Starting from ₹500"
     },
     {
@@ -43,9 +43,9 @@ const Software = () => {
     },
     {
       icon: <Download className="w-10 h-10 text-orange-600" />,
-      title: "Software Installation",
-      description: "Professional installation and configuration of software applications, productivity suites, and specialized programs.",
-      features: ["Office suite installation", "Professional software", "Creative applications", "Development tools", "Business software", "Custom configuration"],
+      title: "Professional Software Installation",
+      description: "Expert installation and configuration of professional software including MS Office, Photoshop, CorelDraw, AutoCAD, and editing applications.",
+      features: ["MS Office Suite", "Adobe Photoshop", "CorelDraw Graphics", "AutoCAD Design", "Video editing software", "Audio editing tools"],
       price: "Starting from ₹200"
     },
     {
@@ -101,28 +101,32 @@ const Software = () => {
 
   const softwareCategories = [
     {
-      category: "Productivity Software",
-      examples: "Microsoft Office, Google Workspace, LibreOffice, Adobe Acrobat"
+      category: "Office & Productivity",
+      examples: "Microsoft Office 365/2021, Google Workspace, LibreOffice, Adobe Acrobat"
     },
     {
-      category: "Creative Applications",
-      examples: "Adobe Creative Suite, Canva, GIMP, Blender, Audacity"
+      category: "Creative & Design",
+      examples: "Adobe Photoshop, CorelDraw, Illustrator, InDesign, GIMP, Canva Pro"
+    },
+    {
+      category: "CAD & Engineering",
+      examples: "AutoCAD, SolidWorks, SketchUp, Fusion 360, CATIA"
+    },
+    {
+      category: "Video & Audio Editing",
+      examples: "Adobe Premiere Pro, After Effects, Audacity, DaVinci Resolve, Camtasia"
     },
     {
       category: "Business Software",
-      examples: "Accounting software, CRM systems, Project management tools"
+      examples: "Accounting software, CRM systems, Project management tools, ERP solutions"
     },
     {
       category: "Development Tools",
-      examples: "IDEs, Compilers, Version control, Database management"
+      examples: "Visual Studio, Android Studio, IDEs, Compilers, Database management"
     },
     {
       category: "Security Software",
-      examples: "Antivirus, Firewall, VPN, Password managers"
-    },
-    {
-      category: "Utility Software",
-      examples: "System cleaners, Backup tools, Compression software"
+      examples: "Antivirus, Firewall, VPN, Password managers, System cleaners"
     }
   ];
 
@@ -143,7 +147,7 @@ const Software = () => {
           <h1 className="text-5xl font-bold mb-4">Professional Software & OS Solutions</h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Complete software services including Windows OS installation, virus removal, system optimization, 
-            and application setup. Professional solutions for all your software and operating system needs.
+            and professional software installation including MS Office, Photoshop, CorelDraw, AutoCAD and more.
           </p>
           <ContactButtons />
         </div>
@@ -224,7 +228,7 @@ const Software = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Software We Install & Support</h2>
-            <p className="text-xl text-gray-600">Wide range of professional and consumer software</p>
+            <p className="text-xl text-gray-600">Wide range of professional and creative software</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
